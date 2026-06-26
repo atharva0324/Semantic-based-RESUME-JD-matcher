@@ -2,10 +2,10 @@ from transformers import AutoModelForTokenClassification,AutoTokenizer
 from transformers import pipeline
 import os
 
-model_path=os.path.join(os.path.dirname(__file__),"skill-extractor-model")
+model_name = "Atharva0324/job-skill-extractor"
 
-model=AutoModelForTokenClassification.from_pretrained(model_path)
-tokenizer=AutoTokenizer.from_pretrained(model_path)
+model=AutoModelForTokenClassification.from_pretrained(model_name)
+tokenizer=AutoTokenizer.from_pretrained(model_name)
 
 ner_pipeline=pipeline(
     "ner",

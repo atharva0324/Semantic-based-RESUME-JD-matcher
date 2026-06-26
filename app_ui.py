@@ -145,19 +145,20 @@ if match_btn:
                             for skill in sorted(result['matched_skills'])
                         ])
                     else:
-                        tags = "<span style='color:#888'>No exact matches found</span>"
+                        tags = "<span style='color:#8b949e'>No exact matches found</span>"
                     st.markdown(f'<div class="section-box">{tags}</div>', unsafe_allow_html=True)
 
                 with col_missing:
-                    st.markdown("#### ❌ Missing Skills")
+                    st.markdown("#### 🎯 Add these skills to improve your ATS score")
                     if result['missing_skills']:
                         tags = " ".join([
                             f'<span class="skill-missing">{skill}</span>'
                             for skill in sorted(result['missing_skills'])
                         ])
                     else:
-                        tags = "<span style='color:#888'>No missing skills detected</span>"
+                        tags = "<span style='color:#8b949e'>No missing skills detected</span>"
                     st.markdown(f'<div class="section-box">{tags}</div>', unsafe_allow_html=True)
+                
 
                 st.caption(f"Inference time: {result['inference_time_seconds']}s")
 
